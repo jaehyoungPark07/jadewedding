@@ -14,11 +14,14 @@ export const metadata: Metadata = {
     description: "박진원 ♡ 강현미 결혼 합니다.",
     images: [
       {
-        url: "https://jadewedding.vercel.app/img/wedding-main.jpeg",
-        width: 800,
-        height: 600,
+        url: "https://jadewedding.vercel.app/img/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "박진원 ♡ 강현미 결혼 합니다.",
       },
     ],
+    type: "website",
+    url: "https://jadewedding.vercel.app",
   },
 };
 
