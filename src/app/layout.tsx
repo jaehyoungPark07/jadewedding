@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "박진원 ♡ 강현미 결혼 합니다.",
     images: [
       {
-        url: "/img/wedding-main.jpeg",
+        url: "https://jadewedding.vercel.app/img/wedding-main.jpeg",
         width: 800,
         height: 600,
       },
