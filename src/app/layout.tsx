@@ -42,7 +42,6 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <Script src={KAKAO_SDK_URL} strategy="beforeInteractive" />
-        <meta property="og:image" content="/img/logo.png" />
       </head>
       <body className={`${inter.className} ${styles.container}`}>
         {children}
