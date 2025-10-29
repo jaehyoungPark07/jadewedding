@@ -117,10 +117,16 @@ const ImageBox = ({ onModalChange }: ImageBoxProps) => {
     setTouchStart(e.clientX);
   };
 
-  const handleMouseUp = (e: React.MouseEvent) => {
-    if (!touchStart) return;
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (touchStart !== null) {
+      setTouchEnd(e.clientX);
+    }
+  };
 
-    const distance = touchStart - e.clientX;
+  const handleMouseUp = () => {
+    if (!touchStart || touchEnd === null) return;
+
+    const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
 
@@ -129,6 +135,9 @@ const ImageBox = ({ onModalChange }: ImageBoxProps) => {
     } else if (isRightSwipe) {
       prevImage();
     }
+
+    setTouchStart(null);
+    setTouchEnd(null);
   };
 
   return (
@@ -172,6 +181,16 @@ const ImageBox = ({ onModalChange }: ImageBoxProps) => {
               ×
             </button>
 
+            {/* 이전 이미지 버튼 (PC 전용) */}
+            <button className={styles.prevButton} onClick={prevImage}>
+              ‹
+            </button>
+
+            {/* 다음 이미지 버튼 (PC 전용) */}
+            <button className={styles.nextButton} onClick={nextImage}>
+              ›
+            </button>
+
             {/* 이미지 */}
             <Image
               alt="확대 이미지"
@@ -187,7 +206,9 @@ const ImageBox = ({ onModalChange }: ImageBoxProps) => {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
               onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
             />
 
             {/* 이미지 인덱스 표시 */}

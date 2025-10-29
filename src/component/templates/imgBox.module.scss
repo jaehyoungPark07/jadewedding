@@ -87,9 +87,9 @@
     }
 
     .closeButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
+      position: absolute;
+      bottom: -50px;
+      right: 0;
       background: rgba(0, 0, 0, 0.8);
       color: white;
       border: none;
@@ -111,9 +111,43 @@
       }
     }
 
+    .prevButton,
+    .nextButton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+      z-index: 1001;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: translateY(-50%) scale(1.1);
+      }
+    }
+
+    .prevButton {
+      left: -60px;
+    }
+
+    .nextButton {
+      right: -60px;
+    }
+
     .imageCounter {
       position: absolute;
-      bottom: -40px;
+      bottom: -50px;
       left: 50%;
       transform: translateX(-50%);
       background: rgba(0, 0, 0, 0.7);
@@ -151,15 +185,22 @@
   .modal {
     .modalContent {
       .closeButton {
-        bottom: 15px;
-        right: 15px;
+        bottom: -20px;
+        right: 0;
         width: 35px;
         height: 35px;
         font-size: 18px;
       }
 
+      .prevButton,
+      .nextButton {
+        display: none;
+      }
+
       .imageCounter {
-        bottom: -30px;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 12px;
         padding: 6px 12px;
       }

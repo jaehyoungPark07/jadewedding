@@ -161,7 +161,7 @@ const MainTemplates = () => {
             >
               <h3>신랑측</h3>
               <span className={styles.toggleIcon}>
-                {isGroomAccountOpen ? "▼" : "▶"}
+                {isGroomAccountOpen ? "▲" : "▼"}
               </span>
             </button>
             {isGroomAccountOpen && (
@@ -193,7 +193,7 @@ const MainTemplates = () => {
             >
               <h3>신부측</h3>
               <span className={styles.toggleIcon}>
-                {isBrideAccountOpen ? "▼" : "▶"}
+                {isBrideAccountOpen ? "▲" : "▼"}
               </span>
             </button>
             {isBrideAccountOpen && (
