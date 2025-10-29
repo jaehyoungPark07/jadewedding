@@ -1,0 +1,611 @@
+@font-face {
+  font-family: "formula1";
+  font-style: normal;
+  src: url("/font/Formula1-Regular-1.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "formula1-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/font/Formula1-Bold_web.ttf") format("ttf");
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  // height: 100%;
+  // margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: font-size 0.3s ease;
+
+  &.largeText {
+    // 텍스트 요소들의 줄바꿈 허용
+    * {
+      white-space: normal !important;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    // 각 섹션별 폰트 크기 조절
+    .weddingDay > p {
+      font-size: clamp(1.95rem, 2.6vw, 3.25rem) !important;
+    }
+
+    .nameDiv {
+      font-size: 28.6px !important;
+      white-space: normal !important;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      > span {
+        display: inline-block;
+        margin: 2px 5px;
+      }
+
+      .and {
+        font-size: 19.5px !important;
+      }
+    }
+
+    .dateDiv {
+      font-size: 26px !important;
+    }
+
+    .secondInnerContainer {
+      > div {
+        font-size: clamp(1.3rem, 2.6vw, 3.25rem) !important;
+        white-space: normal !important;
+        text-align: center;
+      }
+    }
+
+    .thirdInnerContainer {
+      > div {
+        font-size: clamp(1.3rem, 2.6vw, 3.25rem) !important;
+        white-space: normal !important;
+        text-align: center;
+
+        .son {
+          font-size: clamp(1.04rem, 2.6vw, 3.25rem) !important;
+        }
+      }
+    }
+
+    .fourthInnerContainer {
+      > p {
+        font-size: 23.4px !important;
+      }
+
+      .text {
+        font-size: 20.8px !important;
+
+        > div {
+          &:first-of-type > p:first-of-type {
+            font-size: 26px !important;
+          }
+
+          &:nth-of-type(2) > p:first-of-type {
+            font-size: 23.4px !important;
+          }
+
+          &:nth-of-type(2) > div > p {
+            font-size: 18.2px !important;
+          }
+
+          &:nth-of-type(3) > p:first-of-type {
+            font-size: 23.4px !important;
+          }
+
+          &:nth-of-type(3) > div > p {
+            font-size: 18.2px !important;
+          }
+
+          &:nth-of-type(4) > p:first-of-type {
+            font-size: 23.4px !important;
+          }
+
+          &:nth-of-type(4) > div > p {
+            font-size: 18.2px !important;
+          }
+
+          &:nth-of-type(5) > p:first-of-type {
+            font-size: 23.4px !important;
+          }
+
+          &:nth-of-type(5) > div > p {
+            font-size: 18.2px !important;
+          }
+        }
+
+        .footer {
+          font-size: 20.8px !important;
+
+          > p:first-of-type {
+            font-size: 19.5px !important;
+          }
+
+          > p {
+            font-size: 15.6px !important;
+          }
+        }
+
+        .bold {
+          font-size: inherit !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+
+    .fifthInnerContainer {
+      > p:first-of-type {
+        font-size: 23.4px !important;
+      }
+
+      .accountGroup h3 {
+        font-size: 20.8px !important;
+      }
+
+      .accountItem {
+        font-size: 18.2px !important;
+      }
+
+      .accountToggle {
+        h3 {
+          font-size: 20.8px !important;
+        }
+
+        .toggleIcon {
+          font-size: 18.2px !important;
+        }
+      }
+
+      .accountToggle.active {
+        transform: scale(1.05) !important;
+      }
+    }
+  }
+}
+
+.innerContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  // transform: translateY(-30px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "formula1";
+  // padding-top: 20px;
+  background-image: url("/img/웨딩메인.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .title {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25%;
+    .weddingDay {
+      > p {
+        font-size: clamp(1.5rem, 2vw, 2.5rem);
+        font-weight: 300;
+      }
+    }
+    .nameDiv {
+      margin-top: 30px;
+      font-size: 22px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      > span {
+        vertical-align: baseline;
+        padding: 0px 10px;
+      }
+      .and {
+        font-size: 15px;
+      }
+    }
+
+    // .imgDiv {
+    //   position: relative;
+    //   width: 100vw;
+    //   max-width: 460px;
+    //   height: 100%;
+    //   > img {
+    //     object-fit: cover;
+    //     width: 100%;
+    //     height: auto;
+    //   }
+    // }
+    .dateDiv {
+      position: absolute;
+      bottom: 3%;
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.secondInnerContainer {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "SeoulHangangM";
+  row-gap: 30px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+}
+
+.thirdInnerContainer {
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: "formula1";
+  padding-top: 20px;
+  padding-bottom: 20px;
+  row-gap: 22px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    white-space: nowrap;
+    .son {
+      font-size: clamp(0.8rem, 2vw, 1.5rem);
+    }
+    .name {
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+}
+
+.fourthInnerContainer {
+  margin-top: 50px;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "SeoulHangangM";
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  > p {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+    white-space: nowrap;
+
+    &:nth-of-type(3) {
+      font-size: 20px;
+    }
+  }
+
+  .heart {
+    margin-bottom: 15px;
+  }
+
+  .map {
+    margin-top: 25px;
+    position: relative;
+    width: 80vw;
+    height: 60vw;
+    max-width: 460px;
+    max-height: 250px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 460px;
+    flex-wrap: nowrap;
+    row-gap: 10px;
+    font-size: 16px;
+
+    // color: white;
+    > div {
+      &:first-of-type {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        > p {
+          line-height: 1.7;
+
+          &:first-of-type {
+            font-size: 20px;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 20px;
+
+        > p {
+          &:first-of-type {
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          font-size: 10x;
+        }
+
+        > div {
+          margin-top: 10px;
+          line-height: 1.5;
+          > p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        margin-top: 20px;
+
+        > p {
+          &:first-of-type {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        > div {
+          margin-top: 10px;
+          line-height: 1.7;
+          row-gap: 3px;
+          > p {
+            font-size: 14px;
+            &:nth-of-type(3),
+            &:nth-of-type(5) {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        margin-top: 20px;
+
+        > p {
+          &:first-of-type {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        > div {
+          margin-top: 10px;
+          line-height: 1.7;
+          row-gap: 3px;
+          > p {
+            font-size: 14px;
+            &:nth-of-type(4) {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      &:nth-of-type(5) {
+        margin-top: 20px;
+        .bold {
+          font-weight: 600;
+        }
+        > p {
+          &:first-of-type {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        > div {
+          margin-top: 10px;
+          line-height: 1.7;
+          row-gap: 3px;
+          > p {
+            font-size: 14px;
+            &:nth-of-type(4) {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    // .footer {
+    //   margin-top: 30px;
+    //   line-height: 1.7;
+    //   font-size: 16px;
+    //   white-space: nowrap;
+    //   > p {
+    //     &:first-of-type {
+    //       font-size: 15px;
+    //       font-weight: 600;
+    //     }
+    //     font-size: 12px;
+    //   }
+    // }
+  }
+}
+
+.fifthInnerContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 100px;
+
+  > p {
+    &:first-of-type {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      font-family: "SeoulHangangM";
+    }
+  }
+
+  .accountSection {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .accountGroup {
+    .accountToggle {
+      width: 100%;
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+
+      &:hover {
+        background-color: #e9ecef;
+        border-color: #dee2e6;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .toggleIcon {
+        font-size: 14px;
+        color: #666;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .accountToggle.active {
+      background-color: #e3f2fd !important;
+      transform: scale(1.02) !important;
+    }
+  }
+
+  .accountGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+    width: 100%;
+  }
+
+  .accountItem {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.7fr;
+    gap: 6px;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    align-items: center;
+    font-size: 14px;
+
+    .accountNumber {
+      font-weight: 600;
+      color: #495057;
+      word-break: break-all;
+    }
+
+    .bankName {
+      text-align: center;
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    .accountHolder {
+      text-align: right;
+      color: #495057;
+      font-weight: 500;
+    }
+  }
+}
+
+// 큰글씨 토글 버튼
+.largeTextButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  font-family: "formula1";
+
+  &:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// 모바일 반응형
+@media (max-width: 480px) {
+  .largeTextButton {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

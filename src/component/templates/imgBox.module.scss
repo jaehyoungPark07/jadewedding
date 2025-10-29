@@ -1,0 +1,168 @@
+.thridInnerContainer {
+  margin-top: 30px;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .heart {
+    margin-bottom: 20px;
+  }
+
+  .tumbnail {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &::after {
+      display: block;
+      content: "";
+      padding-bottom: 100%;
+    }
+
+    > img {
+      object-fit: contain;
+      border-radius: 50px;
+    }
+  }
+
+  .imgBox {
+    margin-top: 20px;
+    position: relative;
+    width: 90%;
+    column-gap: 5px;
+    row-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .imgItem {
+      position: relative;
+      width: 100%;
+
+      &::after {
+        display: block;
+        content: "";
+        padding-bottom: 150%;
+      }
+
+      > img {
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+// 모달 스타일
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+
+  .modalContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95vw;
+    max-height: 95vh;
+    animation: scaleIn 0.3s ease;
+
+    img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .closeButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+      z-index: 1002;
+
+      &:hover {
+        background: rgba(0, 0, 0, 1);
+        transform: scale(1.1);
+      }
+    }
+
+    .imageCounter {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// 모바일 반응형
+@media (max-width: 768px) {
+  .modal {
+    .modalContent {
+      .closeButton {
+        bottom: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+
+      .imageCounter {
+        bottom: -30px;
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}

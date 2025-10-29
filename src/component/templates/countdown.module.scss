@@ -1,0 +1,28 @@
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "formula1";
+
+  .countdownText {
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 2px;
+    // // background-color: rgba(255, 255, 255, 0.9);
+    // padding: 8px 16px;
+    // border-radius: 20px;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// 모바일 반응형
+@media (max-width: 480px) {
+  .countdownContainer {
+    .countdownText {
+      font-size: 20px;
+      padding: 6px 12px;
+    }
+  }
+}
