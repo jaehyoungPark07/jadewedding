@@ -10,6 +10,10 @@
   font-weight: bold;
   src: url("/font/Formula1-Bold_web.ttf") format("ttf");
 }
+@font-face {
+  font-family: "SeoulHangangM";
+  src: url("/font/SeoulHangangM.woff2") format("woff2");
+}
 
 .container {
   position: relative;
